@@ -1,0 +1,52 @@
+{
+  // 🌟 Global Editor Settings
+  "editor.formatOnSave": true, // Format all supported files on save
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true // Auto-organize imports (for supported languages)
+  },
+  "editor.tabSize": 2, // Consistent indentation
+  "editor.rulers": [80, 120], // Visual guide for line length
+  "files.trimTrailingWhitespace": true, // Clean up whitespace
+  "files.insertFinalNewline": true, // POSIX-friendly file endings
+
+  // 🛠️ Terraform-Specific Settings
+  "[terraform]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "hashicorp.terraform" // Use HashiCorp formatter
+  },
+
+  // 🚀 Terraform Language Server (terraform-ls)
+  "terraform.languageServer": {
+    "enabled": true,
+    "external": true,
+    "args": ["serve"] // Use external terraform-ls binary
+  },
+
+  // 🔐 Security & Secrets Hygiene
+  "search.exclude": {
+    "**/.terraform": true, // Ignore Terraform state folders
+    "**/.terraform.lock.hcl": true // Avoid accidental edits
+  },
+  "files.exclude": {
+    "**/.terraform": true,
+    "**/.terraform.lock.hcl": true
+  },
+
+  // 🧠 IntelliSense & Linting
+  "terraform.indexing": {
+    "enabled": true // Enable indexing for better IntelliSense
+  },
+  "terraform.validation": {
+    "enabled": true // Enable real-time validation
+  },
+
+  // 🧪 Testing & Dev Ergonomics
+  "terminal.integrated.defaultProfile.linux": "bash", // Use Bash for WSL
+  "terminal.integrated.defaultProfile.windows": "PowerShell", // Use PowerShell on Windows
+  "workbench.colorTheme": "Default Dark Modern", // Carlos-style: dark, focused
+  "workbench.iconTheme": "material-icon-theme", // Visual cues for file types
+
+  // 📦 Extensions You Might Want
+  "extensions.ignoreRecommendations": false,
+  "extensions.autoUpdate": true
+}
